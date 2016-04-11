@@ -68,8 +68,7 @@ $userData = '{
     "userName": "' . $decodedResult->profile->login . '"
   },
   "profile": {
-    "role": "Channel Sales Team",
-    "profile": "Force.com - Free User"
+    "profile": "Chatter Free User"
   }  
 }';
 
@@ -96,3 +95,18 @@ else {
 curl_close($curl);
 
 echo "<p><a href = 'https://dev-528971-admin.oktapreview.com/'>Log in to Okta</a></p>";
+
+// **************
+// This alternative configuration works for Force.com - Free User
+// But only 2 Force.com free users are allowed
+// $userData = '{
+//   "id": "' . $decodedResult->id . '",
+//   "scope": "USER",
+//   "credentials": {
+//     "userName": "' . $decodedResult->profile->login . '"
+//   },
+//   "profile": {
+//     "role": "Channel Sales Team",
+//     "profile": "Force.com - Free User"
+//   }  
+// }';
