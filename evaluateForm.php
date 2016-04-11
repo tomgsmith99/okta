@@ -8,7 +8,7 @@ if ($_SERVER['DOCUMENT_ROOT'] === '/var/www/html') { $env = "aws"; }
 else if ($_SERVER['DOCUMENT_ROOT'] === '/Applications/MAMP/htdocs') { $env = "local"; }
 else { echo "<p>Cannot figure out server environment.</p>"; }
 
-if ($env === "aws") { $auth = file_get_contents("/home/okta/passwd.txt"); }
+if ($env === "aws") { $auth = file_get_contents("/home/okta/password.txt"); }
 else if ($env === "local") { $auth = file_get_contents("/Users/tomsmith/okta/password.txt"); }
 
 // print_r($_POST);
